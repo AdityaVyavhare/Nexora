@@ -159,7 +159,7 @@ const NexoraHeader = () => {
                     {/* <User className="h-4 w-4" /> */}
                     <img
                       className="rounded-3xl"
-                      src={`http://localhost:3000/api/media/${profile?.profileImage?.fileId}`}
+                      src={`https://nexora-q1aa.onrender.com//api/media/${profile?.profileImage?.fileId}`}
                     />
                   </div>
                   <span className="hidden md:flex items-center">

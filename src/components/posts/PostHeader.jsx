@@ -8,12 +8,15 @@ const PostHeader = ({ userId, timePosted }) => {
 
   const fecthPostUserDetail = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/users/${userId}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://nexora-q1aa.onrender.com//users/${userId}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const jsondata = await response.json();
       const data = jsondata.result;
       if (data) {
@@ -36,7 +39,7 @@ const PostHeader = ({ userId, timePosted }) => {
           {/* <span className="font-medium text-blue-600">{author.charAt(0)}</span> */}
           <img
             className="rounded-3xl"
-            src={`http://localhost:3000/api/media/${fileId}`}
+            src={`https://nexora-q1aa.onrender.com//api/media/${fileId}`}
           />
         </div>
         <div>

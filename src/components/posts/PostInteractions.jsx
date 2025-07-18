@@ -16,12 +16,15 @@ const PostInteractions = ({
 }) => {
   const share = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/posts/shares/${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://nexora-q1aa.onrender.com//posts/shares/${id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       const data = await response.json();
       console.log("Response from server:", data);

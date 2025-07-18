@@ -1,11 +1,14 @@
 const fetchallposts = async () => {
   try {
-    const response = await fetch("http://localhost:3000/posts/all", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://nexora-q1aa.onrender.com//posts/all",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const data = await response.json();
     console.log("Response from server:", data);
     return data.result;

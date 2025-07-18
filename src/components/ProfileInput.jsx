@@ -120,10 +120,13 @@ const ProfileEditor = () => {
         formData.append("location", profile.location);
         formData.append("interests", JSON.stringify(profile.interests || []));
 
-        const result = await fetch("http://localhost:3000/api/profile", {
-          method: "POST",
-          body: formData,
-        });
+        const result = await fetch(
+          "https://nexora-q1aa.onrender.com//api/profile",
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
 
         const res = await result.json();
         console.log("Uploaded Profile Images:", res);
@@ -136,16 +139,19 @@ const ProfileEditor = () => {
 
         dispatch(addProfile(userProfile));
 
-        const response = await fetch("http://localhost:3000/profile", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            user_id: userId,
-            profile: userProfile,
-          }),
-        });
+        const response = await fetch(
+          "https://nexora-q1aa.onrender.com//profile",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              user_id: userId,
+              profile: userProfile,
+            }),
+          }
+        );
 
         const data = await response.json();
         console.log("Response from server:", data);

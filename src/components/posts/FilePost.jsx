@@ -1,5 +1,5 @@
 const FilePost = ({ media }) => {
-  const fileUrl = `http://localhost:3000/api/media/${media.fileId}`;
+  const fileUrl = `https://nexora-q1aa.onrender.com//api/media/${media.fileId}`;
   return (
     <div className="mt-2 p-4 rounded-lg bg-gray-100">
       <div className="flex items-center space-x-2">

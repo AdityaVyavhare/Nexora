@@ -68,10 +68,13 @@ const CreatePostForm = () => {
         formData.append("file", mediaFile);
       }
 
-      const result = await fetch("http://localhost:3000/api/upload", {
-        method: "POST",
-        body: formData,
-      });
+      const result = await fetch(
+        "https://nexora-q1aa.onrender.com//api/upload",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const res = await result.json();
 
@@ -98,15 +101,18 @@ const CreatePostForm = () => {
 
       dispatch(addPost(finalpost));
       console.log(userId);
-      const response = await fetch("http://localhost:3000/posts/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          post: finalpost,
-        }),
-      });
+      const response = await fetch(
+        "https://nexora-q1aa.onrender.com//posts/add",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            post: finalpost,
+          }),
+        }
+      );
 
       const data = await response.json();
       console.log("Response from server:", data);

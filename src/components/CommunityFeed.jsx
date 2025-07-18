@@ -43,7 +43,7 @@ const CommunityFeed = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/posts/save/${post._id}`,
+        `https://nexora-q1aa.onrender.com//posts/save/${post._id}`,
         {
           method: "PATCH",
           headers: {
@@ -87,16 +87,19 @@ const CommunityFeed = () => {
     dispatch(toggleLike(updatedPost)); // ✅ Dispatch updated post immediately
 
     try {
-      const response = await fetch("http://localhost:3000/posts/like", {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          postId: post._id,
-          increment: post.isLiked ? -1 : 1,
-        }),
-      });
+      const response = await fetch(
+        "https://nexora-q1aa.onrender.com//posts/like",
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            postId: post._id,
+            increment: post.isLiked ? -1 : 1,
+          }),
+        }
+      );
       const data = await response.json();
       console.log("Response from server:", data);
     } catch (err) {
