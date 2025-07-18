@@ -46,7 +46,7 @@ const UserProfile = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://nexora-q1aa.onrender.com//users/${userId}`,
+        `https://nexora-q1aa.onrender.com/users/${userId}`,
         {
           method: "GET",
           headers: {
@@ -136,7 +136,7 @@ const UserProfile = () => {
         <div className="absolute inset-0 bg-opacity-50 bg-[rgba(0,0,0,.5)]"></div>
         {userData.coverImage?.fileId ? (
           <img
-            src={`https://nexora-q1aa.onrender.com//api/media/${userData.coverImage.fileId}`}
+            src={`https://nexora-q1aa.onrender.com/api/media/${userData.coverImage.fileId}`}
             alt="Cover"
             className="w-full h-full object-cover"
             onError={(e) => {
@@ -165,7 +165,7 @@ const UserProfile = () => {
                 <div className="w-24 h-24 rounded-full overflow-hidden ring-4 ring-white">
                   {userData.profileImage?.fileId ? (
                     <img
-                      src={`https://nexora-q1aa.onrender.com//api/media/${userData.profileImage.fileId}`}
+                      src={`https://nexora-q1aa.onrender.com/api/media/${userData.profileImage.fileId}`}
                       alt="Profile"
                       className="w-full h-full object-cover"
                       onError={(e) => {

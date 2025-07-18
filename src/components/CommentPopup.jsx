@@ -17,7 +17,7 @@ const CommentPopup = ({ isOpen, onClose, post }) => {
   const addComment = async (post_id, comment) => {
     try {
       const response = await fetch(
-        "https://nexora-q1aa.onrender.com//posts/comment",
+        "https://nexora-q1aa.onrender.com/posts/comment",
         {
           method: "PATCH",
           headers: {
@@ -41,7 +41,7 @@ const CommentPopup = ({ isOpen, onClose, post }) => {
     try {
       console.log("postttid", post._id);
       const response = await fetch(
-        `https://nexora-q1aa.onrender.com//posts/comment/${post._id}`,
+        `https://nexora-q1aa.onrender.com/posts/comment/${post._id}`,
         {
           method: "GET",
           headers: {
@@ -175,7 +175,7 @@ const CommentPopup = ({ isOpen, onClose, post }) => {
                       <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
                         {comment.avatar && (
                           <img
-                            src={`https://nexora-q1aa.onrender.com//api/media/${comment.avatar}`}
+                            src={`https://nexora-q1aa.onrender.com/api/media/${comment.avatar}`}
                             alt={comment.author}
                             className="w-full h-full object-cover"
                           />
@@ -209,7 +209,7 @@ const CommentPopup = ({ isOpen, onClose, post }) => {
               <div className="flex-shrink-0">
                 <div className="w-8 h-8 rounded-full bg-gray-200">
                   <img
-                    src={`https://nexora-q1aa.onrender.com//api/media/${profile?.profileImage?.fileId}`}
+                    src={`https://nexora-q1aa.onrender.com/api/media/${profile?.profileImage?.fileId}`}
                     alt="Current user"
                     className="w-full h-full object-cover rounded-full"
                   />

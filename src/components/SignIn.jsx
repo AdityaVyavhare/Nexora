@@ -75,7 +75,7 @@ const SignIn = () => {
 
       try {
         const response = await fetch(
-          "https://nexora-q1aa.onrender.com//signin",
+          "https://nexora-q1aa.onrender.com/signin",
           {
             method: "POST",
             headers: {

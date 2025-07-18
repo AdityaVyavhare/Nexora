@@ -6,7 +6,7 @@ const VideoPost = ({ media }) => {
           <video
             controls
             width="600"
-            src={`https://nexora-q1aa.onrender.com//api/media/${media.fileId}`}
+            src={`https://nexora-q1aa.onrender.com/api/media/${media.fileId}`}
             style={{ borderRadius: "10px" }}
           >
             Your browser does not support the video tag.

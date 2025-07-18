@@ -43,7 +43,7 @@ const CommunityFeed = () => {
 
     try {
       const response = await fetch(
-        `https://nexora-q1aa.onrender.com//posts/save/${post._id}`,
+        `https://nexora-q1aa.onrender.com/posts/save/${post._id}`,
         {
           method: "PATCH",
           headers: {
@@ -88,7 +88,7 @@ const CommunityFeed = () => {
 
     try {
       const response = await fetch(
-        "https://nexora-q1aa.onrender.com//posts/like",
+        "https://nexora-q1aa.onrender.com/posts/like",
         {
           method: "PATCH",
           headers: {

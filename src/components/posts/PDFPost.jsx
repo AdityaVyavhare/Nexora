@@ -4,7 +4,7 @@ const PDFPost = ({ media }) => {
       {/* PDF Preview */}
       {/* <div className="h-[70vh] w-full border rounded overflow-hidden">
         <iframe
-          src={`https://nexora-q1aa.onrender.com//api/media/${media.fileId}`}
+          src={`https://nexora-q1aa.onrender.com/api/media/${media.fileId}`}
           className="w-full h-full"
           title="PDF Viewer"
         ></iframe>
@@ -39,7 +39,7 @@ const PDFPost = ({ media }) => {
           </div>
         </div>
         <a
-          href={`https://nexora-q1aa.onrender.com//api/media/${media.fileId}`}
+          href={`https://nexora-q1aa.onrender.com/api/media/${media.fileId}`}
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-1.5 bg-gray-200 hover:bg-gray-300 text-sm rounded-md transition"

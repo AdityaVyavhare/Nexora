@@ -43,7 +43,7 @@ const AudioPost = ({ media }) => {
           style={{ display: "block" }}
         >
           <source
-            src={`https://nexora-q1aa.onrender.com//api/media/${media.fileId}`}
+            src={`https://nexora-q1aa.onrender.com/api/media/${media.fileId}`}
             type={media.type}
           />
           Your browser does not support the audio element.

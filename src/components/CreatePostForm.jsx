@@ -69,7 +69,7 @@ const CreatePostForm = () => {
       }
 
       const result = await fetch(
-        "https://nexora-q1aa.onrender.com//api/upload",
+        "https://nexora-q1aa.onrender.com/api/upload",
         {
           method: "POST",
           body: formData,
@@ -102,7 +102,7 @@ const CreatePostForm = () => {
       dispatch(addPost(finalpost));
       console.log(userId);
       const response = await fetch(
-        "https://nexora-q1aa.onrender.com//posts/add",
+        "https://nexora-q1aa.onrender.com/posts/add",
         {
           method: "POST",
           headers: {

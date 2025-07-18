@@ -121,7 +121,7 @@ const ProfileEditor = () => {
         formData.append("interests", JSON.stringify(profile.interests || []));
 
         const result = await fetch(
-          "https://nexora-q1aa.onrender.com//api/profile",
+          "https://nexora-q1aa.onrender.com/api/profile",
           {
             method: "POST",
             body: formData,
@@ -140,7 +140,7 @@ const ProfileEditor = () => {
         dispatch(addProfile(userProfile));
 
         const response = await fetch(
-          "https://nexora-q1aa.onrender.com//profile",
+          "https://nexora-q1aa.onrender.com/profile",
           {
             method: "POST",
             headers: {

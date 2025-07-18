@@ -51,11 +51,11 @@ const PostAnalyticsDashboard = () => {
   const fetchAnalytics = async () => {
     setLoading(true);
     try {
-      let url = "https://nexora-q1aa.onrender.com//posts/analytics";
+      let url = "https://nexora-q1aa.onrender.com/posts/analytics";
 
       // Use user-specific endpoint when in user tab and we have an active user ID
       if (activeTab === "user" && activeUserId) {
-        url = `https://nexora-q1aa.onrender.com//posts/analytics/user/${activeUserId}`;
+        url = `https://nexora-q1aa.onrender.com/posts/analytics/user/${activeUserId}`;
       }
 
       const response = await fetch(url, {

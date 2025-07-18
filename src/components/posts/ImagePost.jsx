@@ -3,7 +3,7 @@ const ImagePost = ({ media }) => {
   return (
     <div className="mt-2 rounded-lg overflow-hidden">
       <img
-        src={`https://nexora-q1aa.onrender.com//api/media/${media.fileId}`}
+        src={`https://nexora-q1aa.onrender.com/api/media/${media.fileId}`}
         alt="Post image"
         className="w-full h-64 object-cover"
       />

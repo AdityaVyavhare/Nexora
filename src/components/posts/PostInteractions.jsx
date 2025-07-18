@@ -17,7 +17,7 @@ const PostInteractions = ({
   const share = async (id) => {
     try {
       const response = await fetch(
-        `https://nexora-q1aa.onrender.com//posts/shares/${id}`,
+        `https://nexora-q1aa.onrender.com/posts/shares/${id}`,
         {
           method: "PATCH",
           headers: {

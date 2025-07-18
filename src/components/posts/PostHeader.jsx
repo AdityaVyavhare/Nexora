@@ -9,7 +9,7 @@ const PostHeader = ({ userId, timePosted }) => {
   const fecthPostUserDetail = async () => {
     try {
       const response = await fetch(
-        `https://nexora-q1aa.onrender.com//users/${userId}`,
+        `https://nexora-q1aa.onrender.com/users/${userId}`,
         {
           method: "GET",
           headers: {
@@ -39,7 +39,7 @@ const PostHeader = ({ userId, timePosted }) => {
           {/* <span className="font-medium text-blue-600">{author.charAt(0)}</span> */}
           <img
             className="rounded-3xl"
-            src={`https://nexora-q1aa.onrender.com//api/media/${fileId}`}
+            src={`https://nexora-q1aa.onrender.com/api/media/${fileId}`}
           />
         </div>
         <div>
