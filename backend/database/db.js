@@ -1,7 +1,9 @@
 const { MongoClient, ObjectId } = require("mongodb");
 
 const create_user = async (data) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const result = await client
       .db("nosql_project")
@@ -17,7 +19,9 @@ const create_user = async (data) => {
 };
 
 const validate_user = async (body) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const user = await client
       .db("nosql_project")
@@ -33,7 +37,9 @@ const validate_user = async (body) => {
 };
 
 const create_profile = async (body) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   console.log(typeof body.user_id);
   try {
     const result = await client
@@ -54,7 +60,9 @@ const create_profile = async (body) => {
 };
 
 const get_user = async (id) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const result = await client
       .db("nosql_project")

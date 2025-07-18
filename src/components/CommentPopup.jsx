@@ -206,7 +206,7 @@ const CommentPopup = ({ isOpen, onClose, post }) => {
               <div className="flex-shrink-0">
                 <div className="w-8 h-8 rounded-full bg-gray-200">
                   <img
-                    src={`http://localhost:3000/api/media/${profile?.profileImage.fileId}`}
+                    src={`http://localhost:3000/api/media/${profile?.profileImage?.fileId}`}
                     alt="Current user"
                     className="w-full h-full object-cover rounded-full"
                   />

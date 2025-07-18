@@ -11,7 +11,7 @@ let conn = null;
 let gfs = null;
 
 const connectDB = async (
-  mongoURI = "mongodb://localhost:27017/fileuploaddb"
+  mongoURI = "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0/fileuploaddb"
 ) => {
   try {
     const connection = await mongoose.connect(mongoURI);

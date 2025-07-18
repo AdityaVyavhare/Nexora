@@ -4,7 +4,9 @@ const { MongoClient } = require("mongodb");
 
 async function getPostsAnalytics() {
   try {
-    const client = await MongoClient.connect("mongodb://localhost:27017/");
+    const client = await MongoClient.connect(
+      "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+    );
 
     const db = await client.db("nosql_project");
     const collection = db.collection("posts");
@@ -100,7 +102,9 @@ async function getPostsAnalytics() {
 
 async function getUserPostsAnalytics(userId) {
   try {
-    const client = await MongoClient.connect("mongodb://localhost:27017/");
+    const client = await MongoClient.connect(
+      "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+    );
 
     const db = await client.db("nosql_project");
     const collection = db.collection("posts");

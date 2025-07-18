@@ -1,7 +1,9 @@
 const { MongoClient, ObjectId } = require("mongodb");
 
 const fetchallposts = async () => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const posts = await client
       .db("nosql_project")
@@ -19,7 +21,9 @@ const fetchallposts = async () => {
   }
 };
 const addPost = async (body) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const result = await client
       .db("nosql_project")
@@ -36,7 +40,9 @@ const addPost = async (body) => {
 };
 
 const manageLikes = async (body) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   const db = client.db("nosql_project");
 
   try {
@@ -58,7 +64,9 @@ const manageLikes = async (body) => {
 };
 
 const getComment = async (id) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const post = await client
       .db("nosql_project")
@@ -75,7 +83,9 @@ const getComment = async (id) => {
 };
 
 const addComment = async (body) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const result = await client
       .db("nosql_project")
@@ -100,7 +110,9 @@ const addComment = async (body) => {
   }
 };
 const incrementShare = async (id) => {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const result = await client
       .db("nosql_project")
@@ -126,7 +138,9 @@ const incrementShare = async (id) => {
 };
 const isSaved = async (id, body) => {
   console.log(id, body);
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
   try {
     const result = await client
       .db("nosql_project")
@@ -150,7 +164,9 @@ const isSaved = async (id, body) => {
 };
 
 async function getPostsAnalytics() {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
 
   try {
     const db = await client.db("nosql_project");
@@ -246,7 +262,9 @@ async function getPostsAnalytics() {
 }
 
 async function getUserPostsAnalytics(userId) {
-  const client = await MongoClient.connect("mongodb://localhost:27017/");
+  const client = await MongoClient.connect(
+    "mongodb+srv://aditya:royal@cluster0.pfvdu.mongodb.net/?retryWrites=true&w=majority&appName=cluster0"
+  );
 
   try {
     const db = await client.db("nosql_project");
